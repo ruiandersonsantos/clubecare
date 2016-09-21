@@ -240,3 +240,33 @@
 .camera_prev:hover:before {
   color: #21c2f8;
 }
+
+
+/* subscrevendo classes */
+
+.jumbotron1 {
+    background: rgba(33, 194, 248, 0.5);
+}
+
+.jumbotron2 {
+    background: rgba(34, 37, 51, 0.5);
+}
+
+.well1 {
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+.well2 {
+  padding-bottom: 69px;
+  padding-top: 10px;
+}
+
+footer.top-border {
+  border-top: 0px;
+}
+
+.titulo_session {
+    margin-top: 50px;
+}
+

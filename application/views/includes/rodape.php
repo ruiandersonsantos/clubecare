@@ -7,30 +7,30 @@
         <div class="map map_height1">
           <div id="google-map" class="map_model" data-zoom="16"></div>
           <ul class="map_locations">
-            <li data-y="-22.904541" data-x=" -43.179749" data-basic="images/gmap_marker.png" data-active="images/gmap_marker_active.png">
+            <li data-y="-22.904541" data-x=" -43.179749" data-basic="<?= base_url("images/gmap_marker.png")?>" data-active="<?= base_url("images/gmap_marker_active.png")?>">
               <div class="location">
                 <h3 class="txt-clr1">
-                  flooring
+                  Estamos
                   <small>
-                    RETAILER
+                    aqui
                   </small>
                 </h3>  
                   <address>
                     <dl>
-                      <dt>Free phone: </dt>
-                      <dd class="phone"><a href="callto:#"> 800-2345-6789</a></dd>
+                      <dt>Telefone: </dt>
+                      <dd class="phone"><a href="callto:#"> (21)3553-9188</a></dd>
                     </dl>
                     <dl>
-                      <dt>Address: </dt>
-                      <dd> 4578 Marmora Road,Glasgow D04 89GR</dd>
+                      <dt>Endereço: </dt>
+                      <dd> Rua do Ouvidor, 161 / 604 - Centro - RJ</dd>
                     </dl>
                     <dl>
-                      <dt>Hours: </dt>
-                      <dd> 6am-4pm PST M-Th; &nbsp;&nbsp;  6am-3pm PST Fri</dd>
+                      <dt>Whatsapp </dt>
+                      <dd>(21)9999-9999</dd>
                     </dl>
                     <dl>
                       <dt> E-mail: </dt>
-                      <dd><a href="mailto:#">info@demolink.org</a></dd>
+                      <dd><a href="mailto:#">contato@clubecare.com.br</a></dd>
                     </dl>
                   </address>
                 
@@ -45,9 +45,9 @@
     <section class="well1">
         <div class="container"> 
             <p class="rights">
-                Business Company  &#169; <span id="copyright-year"></span>
-                <a href="index-5.html">Privacy Policy</a>
-                More Business Website Templates at <a rel="nofollow" href="http://www.templatemonster.com/category/business-web-templates/" target="_blank">TemplateMonster.com</a>
+                CLUBECARE  &#169; <span id="copyright-year"></span>
+                
+                RODAPÉ AINDA ESTÁ EM DESENVOLVIMENTO
             </p>          
         </div> 
     </section>    

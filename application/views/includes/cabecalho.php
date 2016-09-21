@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="format-detection" content="telephone=no"/>
-        <link rel="icon" href="<?= base_url("images/favicon.ico") ?>" type="image/x-icon"/>
-        <title>HOME</title>
+        <link rel="icon" href="<?= base_url("images/icone_clube.png") ?>" type="image/x-icon"/>
+        <title>ClubeCare</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="<?= base_url("css/bootstrap.css") ?>" media="all"/>
 
         <!-- Links -->
-
+         <link rel="stylesheet" href="<?= base_url("css/contact-form.css") ?>">
 
         <link rel="stylesheet" href="<?= base_url("css/camera.css") ?>" media="all"/>
         <link rel="stylesheet" href="<?= base_url("css/search.css") ?>" media="all"/>
@@ -47,15 +47,12 @@
             <header>  
                 <div class="container top-sect">
                     <div class="navbar-header">
-                        <h1 class="navbar-brand">
-                            <a data-type='rd-navbar-brand'  href="./">ClubeCare<small>Administradora de benefícios</small></a>
-                        </h1>
-                        <a class="search-form_toggle" href="#"></a>
+                        <img src="<?= base_url("images/clubcare_1.png") ?>" alt=""/>
                     </div>
 
                     <div class="help-box text-right">
                         <p>Precisa de ajuda?</p>
-                        <a href="callto:#">21-98766-8572</a>
+                        <a href="callto:#">(21)3553-9188</a>
 
                     </div>
                 </div>
@@ -71,33 +68,15 @@
                                         <a href="./">HOME</a>
                                     </li>
                                     <li>
-                                        <a href="index-1.html">SOBRE</a>
+                                        <a href="#">SOBRE</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="index-2.html">SERVIÇOS<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="#">Lorem ipsum</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Dolor sit amet  </a>                      
-                                            </li>
-                                            <li>
-                                                <a href="#">Conse ctetur </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a href="#">Latest</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Archive</a>
-                                                    </li>                      
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="#">SERVIÇOS<span aria-hidden="true"></span></a>
+                                        
                                     </li>                
 
                                     <li>
-                                        <a href="index-4.html">CONTATOS</a>
+                                        <a href="<?= base_url("contato") ?>">CONTATOS</a>
                                     </li>
                                 </ul>                           
                             </div>
