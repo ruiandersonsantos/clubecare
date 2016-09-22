@@ -18,12 +18,10 @@
         <link rel="stylesheet" href="<?= base_url("css/camera.css") ?>" media="all"/>
         <link rel="stylesheet" href="<?= base_url("css/search.css") ?>" media="all"/>
         <link rel="stylesheet" href="<?= base_url("css/google-map.css") ?>" media="all"/>
+        
 
 
-        <!--JS-->
-        <script src="<?= base_url("js/jquery.js") ?>"></script>
-        <script src="<?= base_url("js/jquery-migrate-1.2.1.min.js") ?>"></script>
-        <script src="<?= base_url("js/rd-smoothscroll.min.js") ?>"></script>
+        
         
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLHtlIlFJEBrnPIeZso1R6sMQBHas3Xg"  type="text/javascript"></script>
 
