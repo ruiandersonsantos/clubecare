@@ -2,60 +2,54 @@
     <div class="container">
 
         <h2>
-         
+
             Contato
         </h2>
-        <form id="contact-form" class='contact-form'>
+        <form id="contact-form" itemid="<?= base_url("contato/enviar") ?>" class='contact-form'>
             <div class="contact-form-loader"></div>
             <fieldset>
                 <label class="name">
-                    <input type="text" name="name" placeholder="Nome:" value="" data-constraints="@Required @JustLetters"/>
-                    <span class="empty-message">*Esse campo é obrigatorio.</span>
-                    <span class="error-message">*Nome invalido.</span>
+                    <span hidden="true" id="val_nome" >*Nome é obrigatorio.</span>
+                    <input type="text" required="required" name="contato_nome" id="contato_nome" placeholder="Nome:" value="" />
+
                 </label>              
 
                 <label class="phone">
-                    <input type="text" name="phone" placeholder="Telefone:" value="" data-constraints="@JustNumbers"/>
+                    <span hidden="true" id="val_telefone" >*Telefone é obrigatorio.</span>
+                    <input type="text" required="required" name="contato_telefone" id="contato_telefone" placeholder="Telefone:" value="" />
 
-                    <span class="empty-message">*Esse campo é obrigatorio.</span>
-                    <span class="error-message">*Telefone invalido.</span>
+
                 </label>
 
                 <label class="email">
-                    <input type="text" name="email" placeholder="Email:" value="" data-constraints="@Required @Email"/>
+                    <span hidden="true" id="val_email"  >*E-mail é obrigatorio.</span>
+                    <input type="text" name="contato_email" id="contato_email" placeholder="Email:" value="" />
 
-                    <span class="empty-message">*Esse campo é obrigatorio.</span>
-                    <span class="error-message">*E-mail invalido.</span>
+
                 </label>
 
                 <label class="message">
-                    <textarea name="message" placeholder="Mensagem" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                    <textarea name="contato_mesagem" id="contato_mensagem" placeholder="Mensagem" ></textarea>
+                    <span hidden="true" id="val_mensagem" >*Mensagem é obrigatoria.</span>
 
-                    <span class="empty-message">*Esse campo é obrigatorio.</span>
-                    <span class="error-message">*Mensagem deve ter mais conteudo.</span>
                 </label>
 
    <!--  <label class="recaptcha"> <span class="empty-message">*This field is required.</span> </label> -->
 
-                <div class="btn-wr text-primary">
-                    <a class="btn btn-primary" href="#" data-type="submit">Enviar</a>
+                <div class="btn-wr text-primary" >
+                    <a class="btn btn-primary" id="btn_enviar" href="#" data-type="submit">Enviar</a>
                 </div>
+
+                <div id="msg_sucesso" hidden="true">
+                    Sua mensagem foi enviada com sucesso!
+                </div>
+
+                <div id="msg_error" hidden="true">
+                    Erro enviando formulario!
+                </div>
+
             </fieldset>
-            <div class="modal fade response-message">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                            </button>
-                            <h4 class="modal-title">Modal title</h4>
-                        </div>
-                        <div class="modal-body">
-                            Sua mensagem foi enviada com sucesso!
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </form>
 
 

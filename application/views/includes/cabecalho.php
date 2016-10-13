@@ -24,6 +24,7 @@
         <script src="<?= base_url("js/jquery.js") ?>"></script>
         <script src="<?= base_url("js/jquery-migrate-1.2.1.min.js") ?>"></script>
         <script src="<?= base_url("js/rd-smoothscroll.min.js") ?>"></script>
+       
         
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLHtlIlFJEBrnPIeZso1R6sMQBHas3Xg"  type="text/javascript"></script>
 
@@ -38,6 +39,7 @@
         <script src="js/html5shiv.js"></script>
         <![endif]-->
         <script src="<?= base_url("js/device.min.js") ?>"></script>
+       
     </head>
     <body>
         <div class="page">
@@ -63,27 +65,27 @@
                         <nav class="navbar navbar-default navbar-static-top pull-left">            
 
                             <div class="">  
-                                <ul class="nav navbar-nav sf-menu" data-type="navbar">
-                                    <li class="active">
-                                        <a href="./">HOME</a>
+                                <ul id="menutopo" class="nav navbar-nav sf-menu" data-type="navbar">
+                                    <li class="<?= $home_active ?>">
+                                        <a href="<?= base_url("") ?>">HOME</a>
                                     </li>
                                     <li>
                                         <a href="#">SOBRE</a>
                                     </li>
-                                    <li class="dropdown">
+                                    <li class="">
                                         <a href="#">SERVIÇOS<span aria-hidden="true"></span></a>
                                         
-                                    </li>                
+                                    </li >                
 
-                                    <li>
+                                    <li class="<?= $contato_active ?>">
                                         <a href="<?= base_url("contato") ?>">CONTATOS</a>
                                     </li>
                                 </ul>                           
                             </div>
                         </nav>   
-                        <form class="search-form" action="search.php" method="GET" accept-charset="utf-8">
+                        <form class="search-form" action="http://sis.boletar.com.br/landing/clubecare/cliente.php" method="POST" accept-charset="utf-8">
                             <label class="search-form_label">
-                                <input class="search-form_input" type="text" name="s" autocomplete="off" placeholder="2ª via do boleto"/>
+                                <input class="search-form_input" type="text" id="cpf" name="cpf" autocomplete="off" placeholder="2ª via do boleto"/>
                                 <span class="search-form_liveout"></span>
                             </label>
                             <button class="search-form_submit fa-search" type="submit"></button>

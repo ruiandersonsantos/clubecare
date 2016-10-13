@@ -3,56 +3,90 @@
      =========================================================-->
 <footer class="top-border">
 
-     <section> 
+    <section> 
         <div class="map map_height1">
-          <div id="google-map" class="map_model" data-zoom="16"></div>
-          <ul class="map_locations">
-            <li data-y="-22.904541" data-x=" -43.179749" data-basic="<?= base_url("images/gmap_marker.png")?>" data-active="<?= base_url("images/gmap_marker_active.png")?>">
-              <div class="location">
-                <h3 class="txt-clr1">
-                  Estamos
-                  <small>
-                    aqui
-                  </small>
-                </h3>  
-                  <address>
-                    <dl>
-                      <dt>Telefone: </dt>
-                      <dd class="phone"><a href="callto:#"> (21)3553-9188</a></dd>
-                    </dl>
-                    <dl>
-                      <dt>Endereço: </dt>
-                      <dd> Rua do Ouvidor, 161 / 604 - Centro - RJ</dd>
-                    </dl>
-                    <dl>
-                      <dt>Whatsapp </dt>
-                      <dd>(21)9999-9999</dd>
-                    </dl>
-                    <dl>
-                      <dt> E-mail: </dt>
-                      <dd><a href="mailto:#">contato@clubecare.com.br</a></dd>
-                    </dl>
-                  </address>
-                
-              </div>
-            </li>
-           
-          </ul>
+            <div id="google-map" class="map_model" data-zoom="16"></div>
+            <ul class="map_locations">
+                <li data-y="-22.904541" data-x=" -43.179749" data-basic="<?= base_url("images/gmap_marker.png") ?>" data-active="<?= base_url("images/gmap_marker_active.png") ?>">
+                    <div class="location">
+                        <h3 class="txt-clr1">
+                            Estamos
+                            <small>
+                                aqui
+                            </small>
+                        </h3>  
+                        <address>
+                            <dl>
+                                <dt>Telefone: </dt>
+                                <dd class="phone"><a href="callto:#"> (21)3553-9188</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>Endereço: </dt>
+                                <dd> Rua do Ouvidor, 161 / 604 - Centro - RJ</dd>
+                            </dl>
+                            <dl>
+                                <dt>Whatsapp </dt>
+                                <dd>(21)9999-9999</dd>
+                            </dl>
+                            <dl>
+                                <dt> E-mail: </dt>
+                                <dd><a href="mailto:#">contato@clubecare.com.br</a></dd>
+                            </dl>
+                        </address>
+
+                    </div>
+                </li>
+
+            </ul>
         </div>
-      </section>
+    </section>
 
 
-    <section class="well1">
+    <section style="background: #f2f2f2;" class="well1">
         <div class="container"> 
-            <p class="rights">
-                CLUBECARE  &#169; <span id="copyright-year"></span>
-                
-                RODAPÉ AINDA ESTÁ EM DESENVOLVIMENTO
-            </p>          
+            <div style="border-right: 1px solid #ccc" class="col-md-4 col-sm-12">
+                <a target="_blank" href="http://www.ans.gov.br/" id="" name="" >
+                    <img src="<?= base_url("images/logo_ans.gif") ?>" alt=""/>
+                </a>
+            </div>  
+
+            <div style="border-right: 1px solid #ccc" class="col-md-4 col-sm-12">
+                <a id="link_rodape_sobrenos" href="#">Sobre nós</a><br />
+                <a id="link_rodape_serviços" href="#">Nossos Serviços</a><br />
+                <a id="link_rodape_faleConosco" href="#">Fale Conosco</a>
+            </div>  
+
+            <div class="col-md-4 col-sm-12 text-center">
+                <strong style="font-size: 18px;">Nossos Canais Sociais</strong>
+                <div class="row">
+                    <div style="margin-left:90px;" class="col-md-2 col-sm-12">
+                        <a class="" href="#" id="" name="" >
+                            <img src="<?= base_url("images/icon_face.ico") ?>" width="40" height="40" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <a class="" href="#" id="" name="" >
+                            <img src="<?= base_url("images/twitter-icon.png") ?>" width="40" height="40" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <a class="" href="#" id="" name="" >
+                            <img src="<?= base_url("images/icon_youtube.png") ?>" width="40" height=40" alt=""/>
+                        </a>
+                    </div>
+
+                </div>
+            </div>   
+
         </div> 
     </section>    
 </footer>
 </div>
+
+<!--JS-->
+<script src="<?= base_url("js/jquery.js") ?>"></script>
+<script src="<?= base_url("js/jquery-migrate-1.2.1.min.js") ?>"></script>
+<script src="<?= base_url("js/rd-smoothscroll.min.js") ?>"></script>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

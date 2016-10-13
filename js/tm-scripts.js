@@ -5,7 +5,8 @@ function include(scriptUrl) {
 function isIE() {
     var myNav = navigator.userAgent.toLowerCase();
     return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
-};
+}
+;
 
 /* cookie.JS
  ========================================================*/
@@ -14,6 +15,111 @@ include('js/jquery.cookie.js');
 /* Easing library
  ========================================================*/
 include('js/jquery.easing.1.3.js');
+
+
+/* Funções genericas RUI
+ ========================================================*/
+;
+(function ($) {
+
+    $(document).ready(function () {
+
+        $('#cpf').focusin(function () {
+            $(this).attr('placeholder', 'Digite seu CPF.');
+        });
+
+        $('#cpf').focusout(function () {
+            $(this).attr('placeholder', '2ª via de boleto.');
+        });
+
+
+        $('#menutopo li').click(function () {
+            $(this).attr('class', '');
+        });
+
+        $('#btn_enviar').click(function () {
+
+            var nome = "", telefone = "", email = "", mensagem = "", vll_ok = true;
+
+            var url = $('#contact-form').attr('itemid');
+
+
+            $('#val_nome').css('color', 'red').hide();
+            $('#val_telefone').css('color', 'red').hide();
+            $('#val_email').css('color', 'red').hide();
+            $('#val_mensagem').css('color', 'red').hide();
+
+            nome = $('#contato_nome').val();
+            telefone = $('#contato_telefone').val();
+            email = $('#contato_email').val();
+            mensagem = $('#contato_mensagem').val();
+
+            if (nome === "") {
+                $('#val_nome').css('color', 'red').show();
+                vll_ok = false;
+            }
+
+            if (telefone === "") {
+                $('#val_telefone').css('color', 'red').show();
+                vll_ok = false;
+            }
+
+            if (email === "") {
+                $('#val_email').css('color', 'red').show();
+                vll_ok = false;
+            }
+
+            if (mensagem === "") {
+                $('#val_mensagem').css('color', 'red').show();
+                vll_ok = false;
+            }
+
+
+            if (vll_ok) {
+
+                $('#val_nome').css('color', 'red').hide();
+                $('#val_telefone').css('color', 'red').hide();
+                $('#val_email').css('color', 'red').hide();
+                $('#val_mensagem').css('color', 'red').hide();
+
+
+                $.post(url, {
+                    nome: nome,
+                    telefone: telefone,
+                    email: email,
+                    mensagem: mensagem
+
+                },
+                        function (data, status) {
+
+                            $("#msg_sucesso").hide();
+                            $("#msg_error").hide();
+
+                            if (data === "sucesso") {
+                                $('#contact-form').each(function () {
+                                    this.reset();
+                                });
+                                $("#msg_sucesso").show();
+                            } else {
+                                $("#msg_error").show();
+                            }
+
+                        });
+
+
+
+            } else {
+
+                return vll_ok;
+            }
+
+
+
+        });
+
+    });
+
+})(jQuery);
 
 
 /* Stick up menus
@@ -25,7 +131,8 @@ include('js/jquery.easing.1.3.js');
         include('js/tmstickup.js');
 
         $(document).ready(function () {
-            $('#stuck_container').TMStickUp({})
+            $('#stuck_container').TMStickUp({});
+
         });
     }
 })(jQuery);
@@ -72,12 +179,12 @@ include('js/jquery.easing.1.3.js');
 ;
 (function ($) {
     function include(url) {
-	document.write('<script src="js/' + url + '"></script>');
-	return false;
-}
-	include('superfish.js');
-	jQuery(function () {
-})
+        document.write('<script src="js/' + url + '"></script>');
+        return false;
+    }
+    include('superfish.js');
+    jQuery(function () {
+    })
 })(jQuery);
 
 
@@ -135,143 +242,143 @@ include('js/jquery.easing.1.3.js');
     var o = document.getElementById("google-map");
     if (o) {
         //include('//maps.google.com/maps/api/js?sensor=false');
-		//include('js/google_map_js.js');
+        //include('js/google_map_js.js');
         include('js/jquery.rd-google-map.js');
 
         $(document).ready(function () {
             var o = $('#google-map');
             if (o.length > 0) {
-                o.googleMap({styles:[{
-                    "featureType": "landscape",
-                    "stylers": [
-                        {
-                            "saturation": -100
+                o.googleMap({styles: [{
+                            "featureType": "landscape",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "lightness": 65
+                                },
+                                {
+                                    "visibility": "on"
+                                }
+                            ]
                         },
                         {
-                            "lightness": 65
+                            "featureType": "poi",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "lightness": 51
+                                },
+                                {
+                                    "visibility": "simplified"
+                                }
+                            ]
                         },
                         {
-                            "visibility": "on"
-                        }
-                    ]
-                },
-                    {
-                        "featureType": "poi",
-                        "stylers": [
-                            {
-                                "saturation": -100
-                            },
-                            {
-                                "lightness": 51
-                            },
-                            {
-                                "visibility": "simplified"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "stylers": [
-                            {
-                                "saturation": -100
-                            },
-                            {
-                                "visibility": "simplified"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.arterial",
-                        "stylers": [
-                            {
-                                "saturation": -100
-                            },
-                            {
-                                "lightness": 30
-                            },
-                            {
-                                "visibility": "on"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.local",
-                        "stylers": [
-                            {
-                                "saturation": -100
-                            },
-                            {
-                                "lightness": 40
-                            },
-                            {
-                                "visibility": "on"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit",
-                        "stylers": [
-                            {
-                                "saturation": -100
-                            },
-                            {
-                                "visibility": "simplified"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "administrative.province",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "labels",
-                        "stylers": [
-                            {
-                                "visibility": "on"
-                            },
-                            {
-                                "lightness": -25
-                            },
-                            {
-                                "saturation": -100
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "hue": "#ffff00"
-                            },
-                            {
-                                "lightness": -25
-                            },
-                            {
-                                "saturation": -97
-                            }
-                        ]
-                    }]});
+                            "featureType": "road.highway",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "visibility": "simplified"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "lightness": 30
+                                },
+                                {
+                                    "visibility": "on"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "lightness": 40
+                                },
+                                {
+                                    "visibility": "on"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "transit",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "visibility": "simplified"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative.province",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels",
+                            "stylers": [
+                                {
+                                    "visibility": "on"
+                                },
+                                {
+                                    "lightness": -25
+                                },
+                                {
+                                    "saturation": -100
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "hue": "#ffff00"
+                                },
+                                {
+                                    "lightness": -25
+                                },
+                                {
+                                    "saturation": -97
+                                }
+                            ]
+                        }]});
             }
         });
     }
 })
-(jQuery);
+        (jQuery);
 
 /* Owl Carousel
-========================================================*/
-;(function ($) {
+ ========================================================*/
+;
+(function ($) {
     var o = $('.owl-carousel');
     if (o.length > 0) {
         include('js/owl.carousel.min.js');
         $(document).ready(function () {
             o.owlCarousel({
-				
                 margin: 30,
                 smartSpeed: 450,
                 loop: true,
@@ -280,9 +387,9 @@ include('js/jquery.easing.1.3.js');
                 nav: true,
                 navClass: ['owl-prev fa fa-angle-left', 'owl-next fa fa-angle-right'],
                 responsive: {
-                    0: { items: 1 },
-                    768: { items: 1},
-                    980: { items: 1}
+                    0: {items: 1},
+                    768: {items: 1},
+                    980: {items: 1}
                 }
             });
         });
@@ -296,7 +403,7 @@ include('js/jquery.easing.1.3.js');
 (function ($) {
     var o = $('html');
 
-    if ((navigator.userAgent.toLowerCase().indexOf('msie') == -1 ) || (isIE() && isIE() > 9)) {
+    if ((navigator.userAgent.toLowerCase().indexOf('msie') == -1) || (isIE() && isIE() > 9)) {
         if (o.hasClass('desktop')) {
             include('js/wow.js');
 
@@ -314,34 +421,32 @@ include('js/jquery.easing.1.3.js');
 $(function () {
     // IPad/IPhone
     var viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]'),
-        ua = navigator.userAgent,
-
-        gestureStart = function () {
-            viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0";
-        },
-
-        scaleFix = function () {
-            if (viewportmeta && /iPhone|iPad/.test(ua) && !/Opera Mini/.test(ua)) {
-                viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
-                document.addEventListener("gesturestart", gestureStart, false);
-            }
-        };
+            ua = navigator.userAgent,
+            gestureStart = function () {
+                viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0";
+            },
+            scaleFix = function () {
+                if (viewportmeta && /iPhone|iPad/.test(ua) && !/Opera Mini/.test(ua)) {
+                    viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+                    document.addEventListener("gesturestart", gestureStart, false);
+                }
+            };
 
     scaleFix();
     // Menu Android
     if (window.orientation != undefined) {
         var regM = /ipod|ipad|iphone/gi,
-            result = ua.match(regM);
+                result = ua.match(regM);
         if (!result) {
             $('.sf-menus li').each(function () {
                 if ($(">ul", this)[0]) {
                     $(">a", this).toggle(
-                        function () {
-                            return false;
-                        },
-                        function () {
-                            window.location.href = $(this).attr("href");
-                        }
+                            function () {
+                                return false;
+                            },
+                            function () {
+                                window.location.href = $(this).attr("href");
+                            }
                     );
                 }
             })
@@ -349,18 +454,19 @@ $(function () {
     }
 });
 var ua = navigator.userAgent.toLocaleLowerCase(),
-    regV = /ipod|ipad|iphone/gi,
-    result = ua.match(regV),
-    userScale = "";
+        regV = /ipod|ipad|iphone/gi,
+        result = ua.match(regV),
+        userScale = "";
 if (!result) {
     userScale = ",user-scalable=0"
 }
 document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">');
 
 /* Camera
-========================================================*/
-;(function ($) {
-var o = $('#camera');
+ ========================================================*/
+;
+(function ($) {
+    var o = $('#camera');
     if (o.length > 0) {
         if (!(isIE() && (isIE() > 9))) {
             include('js/jquery.mobile.customized.min.js');
@@ -395,7 +501,7 @@ var o = $('#camera');
     if (o.length > 0) {
         include('js/TMSearch.js');
     }
-})(jQuery);  
+})(jQuery);
 
 
 
@@ -408,9 +514,9 @@ var o = $('#camera');
     var o = $('#contact-form');
     if (o.length > 0) {
         include('js/modal.js');
-        include('js/TMForm.js'); 
+        include('js/TMForm.js');
 
-        if($('#contact-form .recaptcha').length > 0){
+        if ($('#contact-form .recaptcha').length > 0) {
             include('//www.google.com/recaptcha/api/js/recaptcha_ajax.js');
         }
     }
@@ -421,57 +527,62 @@ var o = $('#camera');
 
 
 /* Facebook
-========================================================*/
+ ========================================================*/
 
-;(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
-fjs.parentNode.insertBefore(js, fjs);
+;
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id))
+        return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-;(function ($) {
-var o = $('.fb-page');
+;
+(function ($) {
+    var o = $('.fb-page');
 
-$(window).load(function () {
-o.css({'display': 'block'})
-.find('span').css({
-'width': '100%',
-'display': 'block',
-'text-align': 'inherit'
-})
-.find('iframe').css({
-'display': 'inline-block',
-'position': 'static'
-});
-});
+    $(window).load(function () {
+        o.css({'display': 'block'})
+                .find('span').css({
+            'width': '100%',
+            'display': 'block',
+            'text-align': 'inherit'
+        })
+                .find('iframe').css({
+            'display': 'inline-block',
+            'position': 'static'
+        });
+    });
 
-$(window).on('load resize', function () {
-if (o.parent().width() < o.find('iframe').width()) {
-o.find('iframe').css({
-'transform': 'scale(' + (o.width() / o.find('iframe').width()) + ')',
-'transform-origin': '0% 0%'
-})
-.parent().css({
-'height': (o.find('iframe').height() * (o.width() / o.find('iframe').width())) + 'px'
-});
-} else {
-o
-.find('span').css({
-'height': 'auto'
-})
-.find('iframe').css({
-'transform': 'none'
-});
-}
-});
+    $(window).on('load resize', function () {
+        if (o.parent().width() < o.find('iframe').width()) {
+            o.find('iframe').css({
+                'transform': 'scale(' + (o.width() / o.find('iframe').width()) + ')',
+                'transform-origin': '0% 0%'
+            })
+                    .parent().css({
+                'height': (o.find('iframe').height() * (o.width() / o.find('iframe').width())) + 'px'
+            });
+        } else {
+            o
+                    .find('span').css({
+                'height': 'auto'
+            })
+                    .find('iframe').css({
+                'transform': 'none'
+            });
+        }
+    });
 })(jQuery);
 
 
 /* FancyBox
-========================================================*/
-;(function ($) {
+ ========================================================*/
+;
+(function ($) {
     var o = $('.thumb');
     if (o.length > 0) {
         include('js/jquery.fancybox.js');
@@ -484,10 +595,11 @@ o
 })(jQuery);
 
 /* Parallax
-=============================================*/
-;(function ($) {
+ =============================================*/
+;
+(function ($) {
     include('js/jquery.rd-parallax.js');
-})(jQuery); 
+})(jQuery);
 
 
 
