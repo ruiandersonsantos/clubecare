@@ -102,6 +102,8 @@
 
                 </div>  
             </header>
+            <!-- Modal para segunda via do boleto -->
+            <!-- Modal para segunda via do boleto -->
 
             <!-- Modal para segunda via do boleto -->
             <div class="modal fade" id="modal_boleto" role="dialog">
