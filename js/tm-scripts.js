@@ -90,21 +90,25 @@ include('js/jquery.easing.1.3.js');
                     mensagem: mensagem
 
                 },
-                        function (data, status) {
+                function (data, status) {
 
-                            $("#msg_sucesso").hide();
-                            $("#msg_error").hide();
+                    $("#msg_sucesso").hide();
+                    $("#msg_error").hide();
 
-                            if (data === "sucesso") {
-                                $('#contact-form').each(function () {
-                                    this.reset();
-                                });
-                                $("#msg_sucesso").show();
-                            } else {
-                                $("#msg_error").show();
-                            }
-
+                    if (data === "sucesso") {
+                        $('#contact-form').each(function () {
+                            this.reset();
                         });
+//                                $("#msg_sucesso").show();
+
+                        $("#modalSucesso").modal('show');
+                    } else {
+//                        $("#msg_error").show();
+
+                        $("#modalErro").modal('show');
+                    }
+
+                });
 
 
 

@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="<?= base_url("css/bootstrap.css") ?>" media="all"/>
 
         <!-- Links -->
-         <link rel="stylesheet" href="<?= base_url("css/contact-form.css") ?>">
+        <link rel="stylesheet" href="<?= base_url("css/contact-form.css") ?>">
 
         <link rel="stylesheet" href="<?= base_url("css/camera.css") ?>" media="all"/>
         <link rel="stylesheet" href="<?= base_url("css/search.css") ?>" media="all"/>
@@ -24,8 +24,8 @@
         <script src="<?= base_url("js/jquery.js") ?>"></script>
         <script src="<?= base_url("js/jquery-migrate-1.2.1.min.js") ?>"></script>
         <script src="<?= base_url("js/rd-smoothscroll.min.js") ?>"></script>
-       
-        
+
+
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLHtlIlFJEBrnPIeZso1R6sMQBHas3Xg"  type="text/javascript"></script>
 
 
@@ -39,7 +39,7 @@
         <script src="js/html5shiv.js"></script>
         <![endif]-->
         <script src="<?= base_url("js/device.min.js") ?>"></script>
-       
+
     </head>
     <body>
         <div class="page">
@@ -62,10 +62,10 @@
 
                 <div id="stuck_container" class="stuck_container">
                     <div class="container">   
-                        <nav class="navbar navbar-default navbar-static-top pull-left">            
+                        <nav class="navbar navbar-default navbar-static-top">            
 
                             <div class="">  
-                                <ul id="menutopo" class="nav navbar-nav sf-menu" data-type="navbar">
+                                <ul id="menutopo" class="nav navbar-nav" data-type="navbar">
                                     <li class="<?= $home_active ?>">
                                         <a href="<?= base_url("") ?>">HOME</a>
                                     </li>
@@ -74,27 +74,70 @@
                                     </li>
                                     <li class="">
                                         <a href="#">SERVIÇOS<span aria-hidden="true"></span></a>
-                                        
+
                                     </li >                
 
                                     <li class="<?= $contato_active ?>">
                                         <a href="<?= base_url("contato") ?>">CONTATOS</a>
                                     </li>
-                                </ul>                           
+
+                                </ul> 
+
+                                <ul class="nav navbar-nav">
+                                    <li ><a id="id_boleto" href="#" data-type="submit" data-toggle="modal" data-target="#modal_boleto">BOLETO</a></li>  
+                                </ul>
+
+<!--                                <form class="search-form" action="http://sis.boletar.com.br/landing/clubecare/cliente.php" method="POST" accept-charset="utf-8">
+                                    <label class="search-form_label">
+                                        <input class="search-form_input" type="text" id="cpf" name="cpf" autocomplete="off" placeholder="2ª via do boleto"/>
+                                        <span class="search-form_liveout"></span>
+                                    </label>
+                                    <button class="search-form_submit fa-search" type="submit"></button>
+                                </form>-->
                             </div>
+
                         </nav>   
-                        <form class="search-form" action="http://sis.boletar.com.br/landing/clubecare/cliente.php" method="POST" accept-charset="utf-8">
-                            <label class="search-form_label">
-                                <input class="search-form_input" type="text" id="cpf" name="cpf" autocomplete="off" placeholder="2ª via do boleto"/>
-                                <span class="search-form_liveout"></span>
-                            </label>
-                            <button class="search-form_submit fa-search" type="submit"></button>
-                        </form>
 
                     </div>
 
                 </div>  
             </header>
+            <!-- Modal para segunda via do boleto -->
+            <!-- Modal para segunda via do boleto -->
+
+            <!-- Modal para segunda via do boleto -->
+            <div class="modal fade" id="modal_boleto" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+
+                                &times;
+                            </button>
+                            <h4 class="modal-title">Segunda via do Boleto</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <form action="http://sis.boletar.com.br/landing/clubecare/cliente.php" method="POST" accept-charset="utf-8"  target="_blank">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-8 col-xs-8">
+                                            <!--<input class="search-form_input" type="text" id="cpf" name="cpf" autocomplete="off" placeholder="2ª via do boleto"/>-->
+                                            <input class="form-control"  type="text" id="cpf" name="cpf" autocomplete="off" placeholder="2ª via do boleto">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <button style="width: 100%;" class="btn btn-primary" type="submit">
+                                                <i class="fa fa-floppy-o" aria-hidden="true"></i> &nbsp;Enviar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             
              <!--========================================================
