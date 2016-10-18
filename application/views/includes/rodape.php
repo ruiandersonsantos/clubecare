@@ -42,7 +42,7 @@
     </section>
 
 
-    <section style="background: #f2f2f2;" class="well1">
+<!--    <section style="background: #f2f2f2;" class="well1">
         <div class="container"> 
             <div style="border-right: 1px solid #ccc" class="col-md-4 col-sm-12">
                 <a target="_blank" href="http://www.ans.gov.br/" id="" name="" >
@@ -77,6 +77,47 @@
 
                 </div>
             </div>   
+
+        </div> 
+    </section>    -->
+
+    <section style="background: #f2f2f2;" class="well1">
+        <div class="container"> 
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div style="border-right: 1px solid #ccc; margin: 10px 0px;" class="col-sm-12 col-md-4">
+                    <a target="_blank" href="http://www.ans.gov.br/" id="" name="" >
+                        <img src="<?= base_url("images/logo_ans.gif") ?>" alt=""/>
+                    </a>
+                </div>  
+
+                <div style="border-right: 1px solid #ccc; margin: 10px 0px;" class="col-xs-12 col-md-4 col-sm-12">
+                    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-md-12"><a id="link_rodape_sobrenos" href="#">Sobre nós</a></div>
+                    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-md-12"><a id="link_rodape_serviços" href="#">Nossos Produtos</a></div>
+                    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-md-12"><a id="link_rodape_faleConosco" href="#">Fale Conosco</a></div>
+                </div>  
+
+                <div  style="margin: 10px 0px;"  class="col-xs-12 col-sm-12 col-md-4 text-center">
+                    <strong style="font-size: 18px;">Nossos Canais Sociais</strong>
+                    <div class="row">
+                        <div class="col-xs-3 col-xs-offset-2 col-sm-2 col-sm-offset-3 col-md-offset-3 col-md-2">
+                            <a class="" href="#" id="" name="" >
+                                <img src="<?= base_url("images/icon_face.ico") ?>" width="40" height="40" alt=""/>
+                            </a>
+                        </div>
+                        <div class="col-xs-3 col-md-2 col-sm-2 col-md-2">
+                            <a class="" href="#" id="" name="" >
+                                <img src="<?= base_url("images/twitter-icon.png") ?>" width="40" height="40" alt=""/>
+                            </a>
+                        </div>
+                        <div class="col-xs-3 col-sm-2 col-md-2">
+                            <a class="" href="#" id="" name="" >
+                                <img src="<?= base_url("images/icon_youtube.png") ?>" width="40" height=40" alt=""/>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
         </div> 
     </section>    
