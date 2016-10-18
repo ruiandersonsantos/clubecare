@@ -75,9 +75,10 @@
                                     <li class="<?= $contato_active ?>">
                                         <a href="<?= base_url("contato") ?>">CONTATO</a>
                                     </li>
-                                    
+
                                     <li >
-                                        <a id="id_boleto"  class="" href="#" data-toggle="modal" >BOLETO</a>
+                                        <!-- 18/10/2016 - Alterei de id para class, porem com o mesmo nome -->
+                                        <a class="id_boleto"  class="" href="#" data-toggle="modal" >BOLETO</a>
                                     </li>  
 
                                 </ul> 
@@ -106,15 +107,18 @@
 
                             <form action="http://sis.boletar.com.br/landing/clubecare/cliente.php" method="POST" accept-charset="utf-8"  target="_blank">
                                 <div class="form-group">
+                                    <!-- 18/10/2016 - Acertei as colunas para ficar responsivo -->
                                     <div class="row">
-                                        <div class="col-md-8 col-sm-8 col-xs-8">
-                                            <input required="required" class="form-control"  type="text" id="cpf" name="cpf" autocomplete="off" placeholder="Digite seu CPF.">
-                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input required="required" class="form-control"  type="text" id="cpf" name="cpf" autocomplete="off" placeholder="Digite seu CPF.">
+                                            </div>
 
-                                        <div class="col-md-4 col-sm-4 col-xs-4">
-                                            <button style="width: 100%;" class="btn btn-primary" type="submit">
-                                                <i class="fa fa-floppy-o" aria-hidden="true"></i> &nbsp;Enviar
-                                            </button>
+                                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                                <button class="btn btn-primary" type="submit">
+                                                    <i class="fa fa-floppy-o" aria-hidden="true"></i> &nbsp;Enviar
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

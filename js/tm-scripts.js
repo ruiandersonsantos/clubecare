@@ -20,7 +20,8 @@ include('js/jquery.easing.1.3.js');
  ========================================================*/
 ;
 (function ($) {
-    var o = $('#id_boleto');
+    /* 18/10/2016 - Alterei de id para class, porem com o mesmo nome */
+    var o = $('.id_boleto');
     if (o.length > 0) {
         include('js/boleto.js');
     }
