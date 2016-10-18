@@ -16,6 +16,16 @@ include('js/jquery.cookie.js');
  ========================================================*/
 include('js/jquery.easing.1.3.js');
 
+/* Bolet.js
+ ========================================================*/
+;
+(function ($) {
+    var o = $('#id_boleto');
+    if (o.length > 0) {
+        include('js/boleto.js');
+    }
+})(jQuery);
+
 
 /* Funções genericas RUI
  ========================================================*/
@@ -23,103 +33,8 @@ include('js/jquery.easing.1.3.js');
 (function ($) {
 
     $(document).ready(function () {
-
-        $('#cpf').focusin(function () {
-            $(this).attr('placeholder', 'Digite seu CPF.');
-        });
-
-        $('#cpf').focusout(function () {
-            $(this).attr('placeholder', '2ª via de boleto.');
-        });
-
-
-        $('#menutopo li').click(function () {
-            $(this).attr('class', '');
-        });
-
-        $('#btn_enviar').click(function () {
-
-            var nome = "", telefone = "", email = "", mensagem = "", vll_ok = true;
-
-            var url = $('#contact-form').attr('itemid');
-
-
-            $('#val_nome').css('color', 'red').hide();
-            $('#val_telefone').css('color', 'red').hide();
-            $('#val_email').css('color', 'red').hide();
-            $('#val_mensagem').css('color', 'red').hide();
-
-            nome = $('#contato_nome').val();
-            telefone = $('#contato_telefone').val();
-            email = $('#contato_email').val();
-            mensagem = $('#contato_mensagem').val();
-
-            if (nome === "") {
-                $('#val_nome').css('color', 'red').show();
-                vll_ok = false;
-            }
-
-            if (telefone === "") {
-                $('#val_telefone').css('color', 'red').show();
-                vll_ok = false;
-            }
-
-            if (email === "") {
-                $('#val_email').css('color', 'red').show();
-                vll_ok = false;
-            }
-
-            if (mensagem === "") {
-                $('#val_mensagem').css('color', 'red').show();
-                vll_ok = false;
-            }
-
-
-            if (vll_ok) {
-
-                $('#val_nome').css('color', 'red').hide();
-                $('#val_telefone').css('color', 'red').hide();
-                $('#val_email').css('color', 'red').hide();
-                $('#val_mensagem').css('color', 'red').hide();
-
-
-                $.post(url, {
-                    nome: nome,
-                    telefone: telefone,
-                    email: email,
-                    mensagem: mensagem
-
-                },
-                function (data, status) {
-
-                    $("#msg_sucesso").hide();
-                    $("#msg_error").hide();
-
-                    if (data === "sucesso") {
-                        $('#contact-form').each(function () {
-                            this.reset();
-                        });
-//                                $("#msg_sucesso").show();
-
-                        $("#modalSucesso").modal('show');
-                    } else {
-//                        $("#msg_error").show();
-
-                        $("#modalErro").modal('show');
-                    }
-
-                });
-
-
-
-            } else {
-
-                return vll_ok;
-            }
-
-
-
-        });
+        
+              
 
     });
 
@@ -517,12 +432,12 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
 (function ($) {
     var o = $('#contact-form');
     if (o.length > 0) {
-        include('js/modal.js');
-        include('js/TMForm.js');
+       // include('js/modal.js');
+      include('js/TMForm.js');
 
-        if ($('#contact-form .recaptcha').length > 0) {
-            include('//www.google.com/recaptcha/api/js/recaptcha_ajax.js');
-        }
+//        if ($('#contact-form .recaptcha').length > 0) {
+//            include('//www.google.com/recaptcha/api/js/recaptcha_ajax.js');
+//        }
     }
 })(jQuery);
 

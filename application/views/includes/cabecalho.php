@@ -20,11 +20,6 @@
         <link rel="stylesheet" href="<?= base_url("css/google-map.css") ?>" media="all"/>
 
 
-        <!--JS-->
-        <script src="<?= base_url("js/jquery.js") ?>"></script>
-        <script src="<?= base_url("js/jquery-migrate-1.2.1.min.js") ?>"></script>
-        <script src="<?= base_url("js/rd-smoothscroll.min.js") ?>"></script>
-
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLHtlIlFJEBrnPIeZso1R6sMQBHas3Xg"  type="text/javascript"></script>
 
@@ -73,27 +68,20 @@
                                         <a href="#">SOBRE</a>
                                     </li>
                                     <li class="">
-                                        <a href="#">SERVIÇOS<span aria-hidden="true"></span></a>
+                                        <a href="#">PRODUTOS<span aria-hidden="true"></span></a>
 
                                     </li >                
 
                                     <li class="<?= $contato_active ?>">
-                                        <a href="<?= base_url("contato") ?>">CONTATOS</a>
+                                        <a href="<?= base_url("contato") ?>">CONTATO</a>
                                     </li>
+                                    
+                                    <li >
+                                        <a id="id_boleto"  class="" href="#" data-toggle="modal" >BOLETO</a>
+                                    </li>  
 
                                 </ul> 
 
-                                <ul class="nav navbar-nav">
-                                    <li ><a id="id_boleto" href="#" data-type="submit" data-toggle="modal" data-target="#modal_boleto">BOLETO</a></li>  
-                                </ul>
-
-<!--                                <form class="search-form" action="http://sis.boletar.com.br/landing/clubecare/cliente.php" method="POST" accept-charset="utf-8">
-                                    <label class="search-form_label">
-                                        <input class="search-form_input" type="text" id="cpf" name="cpf" autocomplete="off" placeholder="2ª via do boleto"/>
-                                        <span class="search-form_liveout"></span>
-                                    </label>
-                                    <button class="search-form_submit fa-search" type="submit"></button>
-                                </form>-->
                             </div>
 
                         </nav>   
@@ -120,8 +108,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-8 col-sm-8 col-xs-8">
-                                            <!--<input class="search-form_input" type="text" id="cpf" name="cpf" autocomplete="off" placeholder="2ª via do boleto"/>-->
-                                            <input class="form-control"  type="text" id="cpf" name="cpf" autocomplete="off" placeholder="2ª via do boleto">
+                                            <input required="required" class="form-control"  type="text" id="cpf" name="cpf" autocomplete="off" placeholder="Digite seu CPF.">
                                         </div>
 
                                         <div class="col-md-4 col-sm-4 col-xs-4">
