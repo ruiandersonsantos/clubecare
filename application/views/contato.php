@@ -1,6 +1,6 @@
 <section class="well well4">
     <div class="container">
-<!--alteracao-->
+        <!--alteracao-->
         <h2>
             Contato
         </h2>
@@ -35,17 +35,17 @@
 
                 <!--  <label class="recaptcha"> <span class="empty-message">*This field is required.</span> </label> -->
 
-<!--                <div class="btn-wr text-primary" >
-                    <a class="btn btn-primary" id="btn_enviar" href="#" data-type="submit">Enviar</a>
-                </div>
-
-                <div id="msg_sucesso" hidden="true">
-                    Sua mensagem foi enviada com sucesso!
-                </div>
-
-                <div id="msg_error" hidden="true">
-                    Erro enviando formulario!
-                </div>-->
+                <!--                <div class="btn-wr text-primary" >
+                                    <a class="btn btn-primary" id="btn_enviar" href="#" data-type="submit">Enviar</a>
+                                </div>
+                
+                                <div id="msg_sucesso" hidden="true">
+                                    Sua mensagem foi enviada com sucesso!
+                                </div>
+                
+                                <div id="msg_error" hidden="true">
+                                    Erro enviando formulario!
+                                </div>-->
 
                 <div class="btn-wr text-primary" >
                     <a class="btn btn-primary" id="btn_enviar" href="#" data-type="submit" data-toggle="modal">Enviar</a>        
@@ -72,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- mensagem de erro no envio do formulario -->
             <div class="modal fade" id="modalErro" role="dialog">
                 <div class="modal-dialog">
