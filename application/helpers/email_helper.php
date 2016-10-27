@@ -5,7 +5,7 @@ function enviaEmail($assunto, $mensagem) {
     $ci = get_instance();
 
     $config["protocol"] = "smtp";
-    $config["smtp_host"] = "smtp.clubecare.com.br";
+    $config["smtp_host"] = "mail.clubecare.com.br";
     $config["smtp_user"] = "contato@clubecare.com.br";
     $config["smtp_pass"] = "cc42301886";
     $config["charset"] = "utf-8";
