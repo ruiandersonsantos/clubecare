@@ -90,10 +90,12 @@
                     </a>
                 </div>  
 
+                <!-- Alteração Simone em 28/10/2016 - Inclusão do link para acesso ao Webmail clubecare -->
                 <div style="border-right: 1px solid #ccc; margin: 10px 0px;" class="col-xs-12 col-md-4 col-sm-12">
                     <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-md-12"><a id="link_rodape_sobrenos" href="#">Sobre nós</a></div>
                     <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-md-12"><a id="link_rodape_serviços" href="#">Nossos Produtos</a></div>
                     <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-md-12"><a id="link_rodape_faleConosco" href="#">Fale Conosco</a></div>
+                    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-md-12"><a id="link_rodape_webmail" target="blanck" href="http://webmail.clubecare.com.br/">Webmail</a></div>
                 </div>  
 
                 <div  style="margin: 10px 0px;"  class="col-xs-12 col-sm-12 col-md-4 text-center">
